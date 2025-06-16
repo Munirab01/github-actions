@@ -19,9 +19,6 @@ jobs:
           curl -s https://raw.githubusercontent.com/armosec/kubescape/master/install.sh | /bin/bash
           sudo mv kubescape /usr/local/bin/
 
-      - name: Debug: List Files
-        run: ls -R
-
       - name: Scan YAML files
         run: kubescape scan framework nsa deployment.yml
 
